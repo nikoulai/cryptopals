@@ -25,7 +25,7 @@ def aesCBC_encrypt(plaintextBytes, iv):
         xorResult = encrypt(temp,iv)
         cipher = obj.encrypt(xorResult)
         ciphertext += cipher
-        iv = xorResult
+        iv = cipher
         return ciphertext
 
 

@@ -25,7 +25,7 @@ def aesCBC_encrypt(plaintextBytes, iv):
         xorResult = encrypt(temp,iv)
         cipher = obj.encrypt(xorResult)
         ciphertext += cipher
-        iv = xorResult
+        iv = cipher
         return ciphertext
 
 
@@ -116,7 +116,7 @@ paddings = ""
 for blocksize in range(16):
     paddings += str(blocksize)
 
-allChars = string.ascii_letters + string.digits + string.punctuation + string.whitespace + string.printable + string.hexdigits + string.whitespace + string.
+allChars = string.ascii_letters + string.digits + string.punctuation + string.whitespace + string.printable + string.hexdigits + string.whitespace 
 # allChars = [chr(i) for i in range(127)]
 foundChars = ""
 for j in range(len(pkcs7(decoded,16))//16):
